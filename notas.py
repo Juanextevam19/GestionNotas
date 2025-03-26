@@ -15,3 +15,4 @@ def Registrar():
         notas[nombre]={} #Crear una lista de notas para este usuario
     print("Usuario registrado con exito")
 
+Registrar()
