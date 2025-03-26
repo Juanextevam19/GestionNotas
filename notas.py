@@ -15,3 +15,14 @@ def Registrar():
         notas[nombre]={} #Crear una lista de notas para este usuario
     print("Usuario registrado con exito")
 
+def iniciar_sesion():
+    print("Inicio de sesion")
+    nombre = input("Ingrese su nombre de usuario")
+    contraseña=input("Ingrese su contraseña")
+    for user in usuarios:
+        if user["nombre"]==nombre and user["contraseña"]==contraseña:
+            print("Sesion iniciada con exito")
+            return user
+    print("Usuario o contraseña incorrectos")
+    return None
+
