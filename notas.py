@@ -15,6 +15,7 @@ def Registrar():
         notas[nombre]={} #Crear una lista de notas para este usuario
     print("Usuario registrado con exito")
 
+
 def iniciar_sesion():
     print("Inicio de sesion")
     nombre = input("Ingrese su nombre de usuario")
