@@ -26,3 +26,24 @@ def iniciar_sesion():
     print("Usuario o contraseña incorrectos")
     return None
 
+def agregar_nota():
+    estudiante = input("Ingrese el nombre del estudiante")
+    if estudiante in notas:
+        materia = input("Ingrese la materia")
+        nota = float(input("Ingrese la nota"))
+        notas[estudiante].setdefault(materia, []).append(nota)
+        print("Nota agregada con exito")
+    else:
+        print("Estudiante no encontrado")
+
+def ver_notas():
+    estudiante = input("Ingrese el nombre del estudiante")
+    if estudiante in notas and notas[estudiante]:
+        for materia, lista_notas in notas[estudiante].items():
+            print(f"{materia}: {lista_notas}")
+    else:
+        print("Estudiante no encontrado o sin notas registradas")
+        
+
+
+
