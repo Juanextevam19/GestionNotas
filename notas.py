@@ -15,6 +15,7 @@ def Registrar():
         notas[nombre]={} #Crear una lista de notas para este usuario
     print("Usuario registrado con exito")
 
+
 def iniciar_sesion():
     print("Inicio de sesion")
     nombre = input("Ingrese su nombre de usuario")
@@ -55,6 +56,7 @@ def ver_promedio():
         print("No tienes notas")
 
 
+
 def menu_profesor():
     while True:
         opcion = input("1. Agregar nota\n2. Ver nota\n3. Salir\n")
@@ -88,4 +90,5 @@ def menu():
             print("Opcion invalida")
 
 menu()
+
 
