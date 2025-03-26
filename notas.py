@@ -56,3 +56,23 @@ def ver_promedio():
         print("No tienes notas")
 
 
+
+def menu_profesor():
+    while True:
+        opcion = input("1. Agregar nota\n2. Ver nota\n3. Salir\n")
+        if opcion == "3":
+            break
+        {"1": agregar_nota, "2": ver_notas}.get(opcion, lambda: print("Opcion invalida"))()
+#
+
+
+def menu_estudiante():
+    while True:
+        opcion = input("1. Ver mis notas\n2. Ver promedio\n3. Salir\n")
+        if opcion == "3":
+            break
+        {"1": ver_notas, "2": ver_promedio}.get(opcion, lambda: print("Opcion invalida"))()
+
+
+
+
