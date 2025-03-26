@@ -75,4 +75,20 @@ def menu_estudiante():
 
 
 
+def menu():
+    while True:
+        opcion = input("1. Registrar\n2. Iniciar sesion\n3. Salir\n")
+        if opcion == "1":
+            Registrar()
+        elif opcion == "2":
+            user = iniciar_sesion()
+            if user:
+                (menu_profesor if user["tipo"] == "profesor" else menu_estudiante)()
+        elif opcion == "3":
+            break
+        else:
+            print("Opcion invalida")
+
+menu()
+
 
