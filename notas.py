@@ -45,5 +45,13 @@ def ver_notas():
         print("Estudiante no encontrado o sin notas registradas")
         
 
+def ver_promedio():
+    nombre = input("Ingrese el nombre del estudiante")
+    if nombre in notas and notas[nombre]:
+        total, cantidad = sum(sum(n) for n in notas[nombre].values()), sum(len(n) for n in notas[nombre].values())
+        print("Promedio:", round(total / cantidad, 2) if cantidad > 0 else "No tienes notas para calcular el promedio.")
+        
+    else:
+        print("No tienes notas")
 
 
