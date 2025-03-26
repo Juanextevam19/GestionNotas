@@ -45,5 +45,31 @@ def ver_notas():
         print("Estudiante no encontrado o sin notas registradas")
         
 
+def ver_promedio():
+    nombre = input("Ingrese el nombre del estudiante")
+    if nombre in notas and notas[nombre]:
+        total, cantidad = sum(sum(n) for n in notas[nombre].values()), sum(len(n) for n in notas[nombre].values())
+        print("Promedio:", round(total / cantidad, 2) if cantidad > 0 else "No tienes notas para calcular el promedio.")
+        
+    else:
+        print("No tienes notas")
+
+
+def menu_profesor():
+    while True:
+        opcion = input("1. Agregar nota\n2. Ver nota\n3. Salir\n")
+        if opcion == "3":
+            break
+        {"1": agregar_nota, "2": ver_notas}.get(opcion, lambda: print("Opcion invalida"))()
+#
+
+
+def menu_estudiante():
+    while True:
+        opcion = input("1. Ver mis notas\n2. Ver promedio\n3. Salir\n")
+        if opcion == "3":
+            break
+        {"1": ver_notas, "2": ver_promedio}.get(opcion, lambda: print("Opcion invalida"))()
+
 
 
